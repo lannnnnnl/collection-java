@@ -4,10 +4,10 @@ public class AnimalNotFoundException extends RuntimeException {
     private Animal animal;
     public AnimalNotFoundException(Animal animal) {
         super(animal.name + " cannot be found.");
-        this.setAnimal(animal);//防止被设置为null
+        this.setAnimal(animal);
     }
-    protected void setAnimal(Animal animal) throws NullPointerException {//进行判定
-        if (animal == null) {//异常情况
+    protected void setAnimal(Animal animal) throws NullPointerException {
+        if (animal == null) {
             throw new NullPointerException();
         }
         this.animal = animal;
